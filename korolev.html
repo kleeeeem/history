@@ -110,6 +110,7 @@
                 <li class="nav-item"><a class="nav-link" href="korolev.html"><i class="fas fa-rocket korolev-color me-1"></i>Сергей Королёв</a></li>
                 <li class="nav-item"><a class="nav-link" href="vavilov.html"><i class="fas fa-seedling vavilov-color me-1"></i>Николай Вавилов</a></li>
                 <li class="nav-item"><a class="nav-link active" href="index.html">Сравнение</a></li>
+                <li class="nav-item"><a class="nav-link" href="quiz.html"><i class="fas fa-puzzle-piece me-1"></i>Викторина</a></li>
             </ul>
         </div>
         </div>
@@ -301,7 +302,39 @@
         </div>
     </div>
 
+<!-- БЛОК СЛУЧАЙНОГО ФАКТА О КОРОЛЁВЕ -->
+<div class="container my-5">
+    <div class="bg-white rounded-4 p-4 shadow-sm text-center">
+        <h4 class="mb-3"><i class="fas fa-lightbulb korolev-color me-2"></i> Случайный факт о Сергее Королёве</h4>
+        <div id="randomFactKorolev" class="lead fst-italic p-3" style="min-height: 100px;">
+            Нажмите на кнопку, чтобы узнать интересный факт.
+        </div>
+        <button id="newFactKorolev" class="btn btn-outline-korolev mt-3"><i class="fas fa-sync-alt me-2"></i>Другой факт</button>
+    </div>
+</div>
 
+<script>
+    (function() {
+        const facts = [
+            "В «шарашке» Королёв работал вместе с Андреем Туполевым и участвовал в создании бомбардировщика Ту-2.",
+            "Из-за пыток на допросах у Королёва была сломана челюсть, что впоследствии привело к его гибели на операционном столе.",
+            "Королёв никогда не носил золотых вещей после Колымы, где работал на золотом прииске.",
+            "Именно Королёв настоял, чтобы спутник был сферическим — для максимального объёма при минимальной массе.",
+            "Королёв лично встречал Гагарина после приземления и первым пожал ему руку.",
+            "В 1930 году Королёв спроектировал планёр «Красная Звезда», на котором впервые в СССР выполнили «мёртвую петлю».",
+            "Королёв всю жизнь скрывал, что был заключённым: его имя не указывали в открытых публикациях, подписывался псевдонимом «Профессор К. Сергеев»."
+        ];
+        const factDiv = document.getElementById('randomFactKorolev');
+        const btn = document.getElementById('newFactKorolev');
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDiv.innerHTML = `<i class="fas fa-quote-left me-2 korolev-color"></i> ${facts[randomIndex]}`;
+        }
+        if (btn) btn.addEventListener('click', showRandomFact);
+        showRandomFact(); // сразу покажем при загрузке
+    })();
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
