@@ -1,0 +1,92 @@
+body {
+            background-color: #f8f9fc;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.6;
+        }
+        .hero-title {
+            font-weight: 700;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
+            color: #1a2b4c;
+        }
+        .korolev-color { color: #1e4f8a; }
+        .vavilov-color { color: #a13b2f; }
+        
+        .section-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 15px 30px -12px rgba(0,20,40,0.15);
+            border: 1px solid rgba(0,40,80,0.08);
+            transition: all 0.2s ease;
+            height: 100%;
+        }
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 40px -15px rgba(0,30,70,0.2);
+        }
+        .bg-soft-primary { background-color: #e9ecf6; }
+        .bg-soft-warning { background-color: #fef3e7; }
+        
+        .border-accent-left {
+            border-left: 6px solid #1e4f8a;
+            padding-left: 1.5rem;
+            background-color: #f1f5fb;
+            border-radius: 0 1rem 1rem 0;
+        }
+        .badge-science {
+            background-color: #2b5f8a;
+            color: white;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 40px;
+        }
+        .btn-outline-science {
+            border: 2px solid #1e4f8a;
+            color: #1e4f8a;
+            border-radius: 40px;
+            padding: 8px 24px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-outline-science:hover {
+            background-color: #1e4f8a;
+            color: white;
+        }
+        .btn-outline-vavilov {
+            border: 2px solid #a13b2f;
+            color: #a13b2f;
+            border-radius: 40px;
+            padding: 8px 24px;
+            font-weight: 600;
+        }
+        .btn-outline-vavilov:hover {
+            background-color: #a13b2f;
+            color: white;
+        }
+        .comparison-table td {
+            padding: 1rem 0.5rem;
+            border-bottom: 1px solid #dee2e8;
+        }
+        .timeline-year {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .timeline-dot.blue { background-color: #1e4f8a; }
+        .timeline-dot.red { background-color: #a13b2f; }
+        footer a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        footer a:hover { color: #1e4f8a; }
+        .nav-link.active {
+            font-weight: 600;
+            border-bottom: 2px solid #1e4f8a;
+        }

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Две судьбы | Николай Вавилов </title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fc;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.6;
+        }
+        .vavilov-color { color: #a13b2f; }
+        .vavilov-bg-light { background-color: #fef3e7; }
+        .hero-title {
+            font-weight: 700;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
+            color: #2c2c2c;
+        }
+        .section-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+            height: 100%;
+            transition: transform 0.2s;
+        }
+        .section-card:hover {
+            transform: translateY(-4px);
+        }
+        .badge-science {
+            background-color: #2b5f8a;
+            color: white;
+            font-weight: 500;
+            padding: 6px 16px;
+            border-radius: 40px;
+        }
+        .border-tragedy {
+            border-left: 6px solid #a13b2f;
+            background-color: #fef3e7;
+            border-radius: 0 1rem 1rem 0;
+        }
+        .timeline-dot-red {
+            width: 18px;
+            height: 18px;
+            background-color: #a13b2f;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 12px;
+            border: 3px solid #f0cfca;
+        }
+        .prison-quote {
+            background: #2c2c2c;
+            color: #e0e0e0;
+            border-radius: 1rem;
+            padding: 1.8rem;
+            font-style: italic;
+        }
+        .btn-outline-vavilov {
+            border: 2px solid #a13b2f;
+            color: #a13b2f;
+            border-radius: 40px;
+            padding: 8px 24px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .btn-outline-vavilov:hover {
+            background-color: #a13b2f;
+            color: white;
+        }
+        .nav-link.active {
+            font-weight: 600;
+            border-bottom: 2px solid #a13b2f;
+            color: #a13b2f !important;
+        }
+        footer a {
+            color: #6c757d;
+            text-decoration: none;
+        }
+        footer a:hover { color: #a13b2f; }
+        .expedition-icon {
+            font-size: 2.5rem;
+            color: #a13b2f;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- навигация -->
+    <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-flask me-2" style="color:#1e4f8a;"></i>Две судьбы
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center gap-3">
+                <li class="nav-item"><a class="nav-link" href="korolev.html"><i class="fas fa-rocket korolev-color me-1"></i>Сергей Королёв</a></li>
+                <li class="nav-item"><a class="nav-link" href="vavilov.html"><i class="fas fa-seedling vavilov-color me-1"></i>Николай Вавилов</a></li>
+                <li class="nav-item"><a class="nav-link active" href="index.html">Сравнение</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-8">
+                <h1 class="hero-title">Николай Иванович <span class="vavilov-color">Вавилов</span></h1>
+                <h4 class="text-secondary fw-light">Учёный, который хотел накормить мир, но погиб от голода в сталинской тюрьме</h4>
+                <p class="lead mt-4">Генетик, ботаник, географ, академик АН СССР, президент ВАСХНИЛ, создатель учения о мировых центрах происхождения культурных растений и закона гомологических рядов. Человек, чья наука была объявлена «буржуазной», а жизнь оборвалась в застенках НКВД.</p>
+                <div class="mt-4 d-flex flex-wrap gap-4">
+                    <span><i class="fas fa-dna vavilov-color me-1"></i> Закон гомологических рядов (1920)</span>
+                    <span><i class="fas fa-globe-americas vavilov-color me-1"></i> 180 экспедиций</span>
+                    <span><i class="fas fa-database vavilov-color me-1"></i> 250 000 образцов семян</span>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="bg-white rounded-circle p-4 shadow-sm d-inline-block">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='54' fill='%23fef3e7' stroke='%23a13b2f' stroke-width='2'/%3E%3Ctext x='60' y='70' font-size='42' text-anchor='middle' fill='%23a13b2f' font-family='Arial'%3E🌾🧬%3C/text%3E%3C/svg%3E" alt="Вавилов" style="width:160px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  КЛЮЧЕВЫЕ ФАКТЫ  -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="section-card">
+                    <h3><i class="fas fa-microscope vavilov-color me-2"></i> Научный подвиг</h3>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> <strong>Закон гомологических рядов</strong> — предсказание наследственной изменчивости</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> <strong>Центры происхождения культурных растений</strong> — 7 мировых очагов</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> <strong>Учение об иммунитете растений</strong> — генетическая устойчивость</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Создал <strong>крупнейшую в мире коллекцию семян</strong> (ВИР, 250 тыс. образцов)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Основатель и первый президент ВАСХНИЛ (1929–1935)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-card border-tragedy">
+                    <h3><i class="fas fa-gavel vavilov-color me-2"></i> Приговор и гибель</h3>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-handcuffs text-danger me-2"></i> <strong>Арестован</strong> 6 августа 1940 в Черновцах</li>
+                        <li class="mb-2"><i class="fas fa-skull-crossbones text-danger me-2"></i> <strong>Расстрельный приговор</strong> 9 июля 1941 (заменён на 20 лет)</li>
+                        <li class="mb-2"><i class="fas fa-heart-broken text-danger me-2"></i> <strong>Умер от пеллагры (голод)</strong> в Саратовской тюрьме 26 января 1943</li>
+                        <li class="mb-2"><i class="fas fa-trophy text-success me-2"></i> <strong>Посмертно реабилитирован</strong> в 1955 году</li>
+                    </ul>
+                    <div class="alert alert-dark mt-3 small">
+                        <i class="fas fa-quote-left me-1"></i> «Великий ученый, гений мирового ранга... сдох как собака в саратовской тюрьме» — В.П. Эфроимсон
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- БИОГРАФИЯ -->
+    <div class="container my-5">
+        <div class="bg-white rounded-4 p-4 shadow-sm">
+            <h3 class="mb-4"><i class="fas fa-book-open vavilov-color me-2"></i> Жизненный путь</h3>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <h5><span class="timeline-dot-red"></span> Детство и образование (1887–1911)</h5>
+                        <p>Родился в Москве в купеческой семье. Окончил Московский коммерческое училище, затем Московский сельскохозяйственный институт. Ученик Д.Н. Прянишникова. Уже в молодости проявил невероятную тягу к ботанике и генетике. Знал более 20 языков.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><span class="timeline-dot-red"></span> Стажировка в Европе (1913–1914)</h5>
+                        <p>Работал в лабораториях Эрнста Геккеля (Йена), у Уильяма Бейтсона (Англия), в фирме «Вильморен» (Франция). Овладел передовыми методами генетики и селекции.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><span class="timeline-dot-red"></span> Профессор в Саратове (1917–1921)</h5>
+                        <p>Возглавил кафедру генетики, селекции и частного земледелия. Здесь 4 июня 1920 года выступил с докладом о законе гомологических рядов — открытии, которое сравнивали с таблицей Менделеева.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <h5><span class="timeline-dot-red"></span> Руководитель ВИР и президент ВАСХНИЛ (1921–1940)</h5>
+                        <p>С 1921 года — заведующий Отделом прикладной ботаники (будущий ВИР). Создал сеть опытных станций по всему СССР. В 1929–1935 — первый президент ВАСХНИЛ. Организовал 180 ботанико-агрономических экспедиций по всему миру.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><span class="timeline-dot-red"></span> Мировое признание</h5>
+                        <p>Иностранный член Лондонского королевского общества (1942), почётный доктор университетов Софии и Брно, член Германской академии «Леопольдина». Лауреат Ленинской премии (1926).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  ЭКСПЕДИЦИИ  -->
+    <div class="container my-5">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-7">
+                <div class="section-card">
+                    <h3><i class="fas fa-hiking vavilov-color me-2"></i> 180 экспедиций по всему миру</h3>
+                    <p>Вавилов объехал <strong>65 стран</strong> на всех континентах, кроме Австралии и Антарктиды. Результат — коллекция из <strong>250 000 образцов семян</strong>, крупнейшая в мире.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt vavilov-color me-2"></i> <strong>1916</strong> — Иран (раскрыл причину отравления солдат грибком)</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt vavilov-color me-2"></i> <strong>1924</strong> — Афганистан (первыми из европейцев проникли в Нуристан)</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt vavilov-color me-2"></i> <strong>1926–1927</strong> — Средиземноморье, Эфиопия, Эритрея</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt vavilov-color me-2"></i> <strong>1929</strong> — Китай, Япония, Тайвань, Корея</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt vavilov-color me-2"></i> <strong>1930–1933</strong> — США, Мексика, Центральная и Южная Америка (17 стран)</li>
+                    </ul>
+                    <div class="bg-soft-warning p-3 rounded-3 mt-3">
+                        <i class="fas fa-quote-left me-1 text-secondary"></i> «Путешествие было удачное, обобрали весь Афганистан, пробрались к Индии» — из письма Вавилова.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 text-center">
+                <i class="fas fa-globe-americas expedition-icon"></i>
+                <i class="fas fa-globe-asia expedition-icon ms-3"></i>
+                <i class="fas fa-map-marked-alt expedition-icon ms-3 mt-3 d-inline-block"></i>
+                <p class="mt-3 text-muted"><small>Маршруты экспедиций Вавилова охватили весь мир</small></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- КОНФЛИКТ С ЛЫСЕНКО  -->
+    <div class="container my-5">
+        <div class="border-tragedy p-4">
+            <h4><i class="fas fa-users-slash vavilov-color me-2"></i> Трагедия советской генетики: Лысенко против Вавилова</h4>
+            <p>В начале 1930-х Вавилов поддерживал работы молодого агронома Трофима Лысенко по яровизации. Но когда Лысенко начал отрицать законы Менделя и генетику в целом, Вавилов выступил против него. Лысенко, пользуясь поддержкой Сталина, объявил генетику «буржуазной лженаукой».</p>
+            <p>В 1939 году сторонник Лысенко И.И. Презент написал донос на Вавилова в Совнарком, назвав его «вредителем» и «морганистом». В 1940 году Вавилов был арестован. Лысенко лично утвердил состав экспертной комиссии по делу Вавилова, состоявшую из его сторонников.</p>
+            <p class="mb-0 fst-italic text-secondary mt-3">«Мы пойдём на костёр за наши взгляды и никому наших позиций не уступим» — слова Вавилова, обращённые к оппонентам.</p>
+        </div>
+    </div>
+
+    <!-- АРЕСТ И СЛЕДСТВИЕ -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="prison-quote">
+                    <i class="fas fa-quote-right float-end fs-1 opacity-25"></i>
+                    <h5><i class="fas fa-file-alt me-2"></i> Из постановления на арест (1940)</h5>
+                    <p>«Вавилов Н. И. является сыном бывшего крупного московского купца... С первых дней установления Советской Власти Вавилов враждебно относится к существующему строю... Продвигая заведомо враждебные теории, ведёт борьбу против теорий и работ Лысенко, Цицина и Мичурина».</p>
+                    <hr class="border-light">
+                    <p class="small mb-0">👉 <strong>Фальсификация</strong>: Вавилова обвинили в руководстве никогда не существовавшей «Трудовой крестьянской партии». Следствие велось с грубейшими нарушениями, применялись пытки (лишение сна, избиения, 1700 часов допросов). В 1955 году Военная коллегия Верховного суда СССР полностью реабилитировала Вавилова, признав все обвинения сфабрикованными.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- СМЕРТЬ И РЕАБИЛИТАЦИЯ -->
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="section-card text-center">
+                    <i class="fas fa-skull-crossbones fa-3x vavilov-color mb-3"></i>
+                    <h5>Смерть в тюрьме (1943)</h5>
+                    <p>26 января 1943 года Николай Вавилов умер в тюремной больнице Саратова от пеллагры — болезни, вызванной запредельным голоданием. Похоронен на Воскресенском кладбище Саратова. Место могилы было утеряно и восстановлено лишь в 1960-х.</p>
+                    <div class="small text-muted mt-2">Акт о смерти: «Упитанность резко понижена... смерть наступила вследствие упадка сердечной деятельности».</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="section-card text-center">
+                    <i class="fas fa-trophy fa-3x vavilov-color mb-3"></i>
+                    <h5>Реабилитация и память</h5>
+                    <p>20 августа 1955 года Военная коллегия Верховного суда СССР отменила приговор «за отсутствием состава преступления». Восстановлен в Академии наук. В 1965 году учреждена премия имени Вавилова, ВИР назван его именем. 1987 год объявлен ЮНЕСКО Годом Вавилова.</p>
+                    <div class="mt-3">
+                        <span class="badge bg-secondary">Институт общей генетики РАН им. Н.И. Вавилова</span>
+                        <span class="badge bg-secondary mt-1">Кратер Вавилова на Луне</span>
+                        <span class="badge bg-secondary mt-1">Астероид (2862) Vavilov</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- НАУЧНЫЕ ТРУДЫ (ТАБЛИЦА) -->
+    <div class="container my-5">
+        <h3 class="mb-4"><i class="fas fa-flask vavilov-color me-2"></i> Вклад в мировую науку</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle bg-white rounded-4 overflow-hidden">
+                <thead class="table-light">
+                    <tr><th style="width: 25%">Направление</th><th style="width: 45%">Суть открытия</th><th style="width: 30%">Значение сегодня</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="fw-bold">Закон гомологических рядов</td><td>У близких видов и родов наблюдается сходная наследственная изменчивость (параллелизм)</td><td>Позволяет предсказывать неизвестные формы растений, основа селекции</td></tr>
+                    <tr><td class="fw-bold">Центры происхождения культурных растений</td><td>Выделил 7 мировых очагов, где возникло земледелие (Эфиопия, Средиземноморье, Анды, Китай и др.)</td><td>Основа для поиска диких родичей культурных растений, сохранения биоразнообразия</td></tr>
+                    <tr><td class="fw-bold">Коллекция ВИР</td><td>250 000 образцов семян со всего мира. В блокадном Ленинграде сотрудники умирали от голода, но охраняли семена</td><td>Один из крупнейших генетических банков растений в мире</td></tr>
+                    <tr><td class="fw-bold">Иммунитет растений</td><td>Учение о генетической устойчивости злаков к грибковым заболеваниям</td><td>Используется в создании устойчивых сортов пшеницы и других культур</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Память -->
+    <div class="container my-5">
+        <div class="bg-white rounded-4 p-4 shadow-sm text-center">
+            <h4><i class="fas fa-landmark vavilov-color me-2"></i> Увековечение памяти</h4>
+            <div class="row mt-4">
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-building fa-2x vavilov-color"></i><br><small>Институт генетики РАН им. Вавилова</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-seedling fa-2x vavilov-color"></i><br><small>ВИР им. Вавилова (СПб)</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-university fa-2x vavilov-color"></i><br><small>СГАУ им. Вавилова (Саратов)</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-globe fa-2x vavilov-color"></i><br><small>Кратер на Луне и астероид</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-map-marker-alt fa-2x vavilov-color"></i><br><small>Улицы в 20+ городах</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-medal fa-2x vavilov-color"></i><br><small>Премия РАН им. Вавилова</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-film fa-2x vavilov-color"></i><br><small>Х/ф «Николай Вавилов» (1990)</small></div>
+                <div class="col-md-3 col-6 mb-3"><i class="fas fa-envelope fa-2x vavilov-color"></i><br><small>Почтовые марки СССР</small></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Вывод -->
+    <div class="container my-5">
+        <div class="p-5 text-white rounded-4" style="background: linear-gradient(135deg, #5a2d23 0%, #a13b2f 100%);">
+            <h4 class="fw-light">«Мы пойдём на костёр за наши взгляды»</h4>
+            <p class="mt-3 opacity-75">Николай Вавилов заплатил жизнью за верность науке. Его дело не погибло: коллекция семян была сохранена его учениками в блокадном Ленинграде, а генетика в СССР возродилась после 1965 года. Сегодня имя Вавилова стоит в одном ряду с величайшими биологами XX века.</p>
+            <p class="mt-2 small">«По внутреннему убеждению обвинений в отсутствии руководства я принять не могу» — из письма Вавилова перед арестом.</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
